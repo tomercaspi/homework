@@ -10,10 +10,11 @@ var myData = JSON.parse(ANCESTRY_FILE);
 /**
  * return the position of the object if the name is equal
  * */
-function isExists(targetArr, motherName){
-    for (var i=0; i< targetArr.length-1; i++){
-        if (targetArr[i].name === motherName)
+function getPosition(targetArr, motherName){
+    for (var i=0; i< targetArr.length-1; i++) {
+        if (targetArr[i].name === motherName){
             return i;
+    }
     }
     return -1;
 }
@@ -28,7 +29,7 @@ function getMotherAverageAge(data){
 
     for (var i=0; i < data.length-1; i++){
         if(data[i].mother != null) {
-            position = isExists(data, data[i].mother);
+            position = getPosition(data, data[i].mother);
             if (position != -1) {
                 sumOfAge += data[i].born - data[position].born;
                 counter++;
