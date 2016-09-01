@@ -20,8 +20,11 @@ function getMotherAverageAge(data){
         dataMap = {};
 
     for (var i=0; i <= data.length-1; i++) {
+        //var id = "ID";
         if(data[i].mother != null) {
+            //id += i;
             dataMap[data[i].mother] = i;
+            //dataMap[id] = i
         }
     }
 
