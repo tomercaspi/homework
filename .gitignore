@@ -33,5 +33,9 @@ jspm_packages
 # Optional npm cache directory
 .npm
 
+# Editor stuff
+.idea
+.project
+
 # Optional REPL history
 .node_repl_history
